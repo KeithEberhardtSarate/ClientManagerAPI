@@ -16,4 +16,9 @@ async function list() {
     return clients;
 }
 
-export { create, list };
+async function findbyId(id) {
+    const client = await Client.find(id);
+    return client;
+}
+
+export { create, list, findbyId };

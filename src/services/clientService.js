@@ -17,7 +17,7 @@ async function list() {
 }
 
 async function findbyId(id) {
-    const client = await Client.find(id);
+    const client = await Client.findById(id);
     return client;
 }
 

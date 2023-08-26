@@ -21,8 +21,8 @@ async function listClients(req, res) {
 
 async function getClientById(req, res) {
     try {
-      const { _id } = req.body;
-      const client = await findbyId(_id);
+      const { id } = req.params;
+      const client = await findbyId(id);
       if(client){
         res.status(201).json(client);
       }else{
